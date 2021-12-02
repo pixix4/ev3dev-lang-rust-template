@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "ev3dev-lang-rust"
-version = "0.10.2"
+version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4150f08651eaa689b4ccc4170a514a5331c3a02b0e3042883e72f2de7e61468"
+checksum = "617633ccf9b91429eaba5f52d702f4fdb97304eb35c9bd5456389ef1f40a3cb5"
 dependencies = [
  "ev3dev-lang-rust-derive",
  "libc",
