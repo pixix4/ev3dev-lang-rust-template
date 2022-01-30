@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ev3dev-lang-rust = "0.11.0"
+ev3dev-lang-rust = "0.12.0"
 
 [profile.release]
 lto = true

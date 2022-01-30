@@ -15,7 +15,7 @@ fn main() -> Ev3Result<()> {
     // Run motor.
     large_motor.set_duty_cycle_sp(50)?;
 
-    // Find color sensor. Always returns the first recognised one.
+    // Find color sensor. Always returns the first recognized one.
     let color_sensor = ColorSensor::find()?;
 
     // Switch to rgb mode.
