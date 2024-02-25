@@ -10,26 +10,21 @@ This is a template for creating and building projects with [`ev3dev-lang-rust`](
 
 ## Setup
 
-Install the `armv5te-musl` toolchain
-
-```bash
-rustup target add armv5te-unknown-linux-musleabi
-```
+A docker setup is required. The build works by running `docker run`.
 
 ## Usage
 
 Build this project:
 
 ```bash
-cargo build --release
+make
+
+# or
+
+docker run --rm -v $(PWD):/build -w /build pixix4/ev3dev-rust:latest cargo build --release --target armv5te-unknown-linux-musleabi
 ```
 
-The resulting binary can be found at `./target/armv5te-unknown-linux-musleabi/release/<ARTIFACT>`.
-
-Optionally strip the executable to reduce binary size:
-
+The resulting binary can be found at `./target/armv5te-unknown-linux-musleabi/release/<ARTIFACT>`. To execute the binary, copy it onto the robot an execute:
 ```bash
-make strip
-# or
-docker run --rm -v $(PWD):/build -w /build pixix4/ev3dev-rust:latest arm-linux-gnueabi-strip /build/target/armv5te-unknown-linux-musleabi/release/<ARTIFACT>
+brickrun -r ./<ARTIFACT>
 ```
